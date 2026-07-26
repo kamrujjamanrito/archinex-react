@@ -744,7 +744,7 @@
     }
 
     @include max-screen(575px) {
-      font-size: clamp(40px, 10vw, 110px);
+      font-size: clamp(90px, 10vw, 110px);
     }
   }
 

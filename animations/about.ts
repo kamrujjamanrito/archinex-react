@@ -32,47 +32,57 @@ export function initAbout(): () => void {
     section.dataset.aboutAnimation = "true";
 
     const ctx = gsap.context(() => {
+      const vw = window.innerWidth;
+
+      let startScale = 0.11;
+      let startY = -610;
+      let startX = "20.4%";
+
+      if (vw >= 1400) {
+        startScale = 0.11;
+        startY = -610;
+        startX = "20.4%";
+      } else {
+        startScale = 0.11;
+        startY = -605;
+        startX = "22%";
+      }
+
       gsap.set(image, {
-        borderRadius: "400px",
+        borderRadius: 4000,
       });
 
       gsap.set(thumb, {
-        scale: 0.05,
-        y: "-645px",
-        x: "21.5%",
+        scale: startScale,
+        y: startY,
+        x: startX,
         overflow: "hidden",
+        transformOrigin: "center center",
       });
 
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: heroSection,
-            start: "center-=200 center",
-            end: "+=100%",
-            scrub: true,
-            pin: false,
-          },
-        })
-        .to(
-          image,
-          {
-            borderRadius: "0px",
-            duration: 3,
-            ease: "power1.inOut",
-          },
-          "<",
-        )
-        .to(
-          thumb,
-          {
-            scale: 1,
-            y: "0%",
-            x: "0%",
-            duration: 3,
-            ease: "power1.inOut",
-          },
-          "<",
-        );
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: heroSection,
+          start: "center-=400 center",
+          end: "+=100%",
+          scrub: 1,
+          pin: false,
+        },
+      });
+
+      tl.to(image, {
+        borderRadius: 0,
+        duration: 2,
+        ease: "power1.inOut",
+      });
+
+      tl.to(thumb, {
+        scale: 1,
+        y: 0,
+        x: 0,
+        duration: 2,
+        ease: "power1.inOut",
+      });
     }, section);
 
     contexts.push(ctx);
