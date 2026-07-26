@@ -1,8 +1,6 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
-
 import { instagramData } from "@/public/data/instagram-data";
 
 const InstagramFeed = () => {
@@ -20,9 +18,7 @@ const InstagramFeed = () => {
 
           <div className="col-12 col-sm-7">
             <div className="insta-feed__title">
-              <p className="txt-light-6">
-                {instagramData.title}
-              </p>
+              <p className="txt-light-6">{instagramData.title}</p>
             </div>
           </div>
         </div>
@@ -31,19 +27,13 @@ const InstagramFeed = () => {
           <div className="col-12">
             <div className="insta-feed__inner mt-35">
               {[1, 2].map((slider) => (
-                <div
-                  key={slider}
-                  className="insta-feed__slider"
-                >
+                <div key={slider} className="insta-feed__slider">
                   {instagramData.items.map((item) => (
                     <div
                       key={`${slider}-${item.id}`}
                       className="insta-feed__single"
                     >
-                      <Image
-                        src={item.image}
-                        alt={item.alt}
-                      />
+                      <Image src={item.image} alt={item.alt} />
 
                       <Link href={instagramData.href}>
                         <i className="ph ph-instagram-logo"></i>

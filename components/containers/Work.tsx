@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import WorkCard from "../widgets/WorkCard";
 import { workData } from "@/public/data/work-data";
 

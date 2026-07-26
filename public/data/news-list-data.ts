@@ -1,9 +1,7 @@
 import type { StaticImageData } from "next/image";
-
 import seven from "@/public/images/news/seven.webp";
 import eight from "@/public/images/news/eight.webp";
 import nine from "@/public/images/news/nine.webp";
-
 import phOne from "@/public/images/news/ph-one.webp";
 import phTwo from "@/public/images/news/ph-two.webp";
 import phThree from "@/public/images/news/ph-three.webp";

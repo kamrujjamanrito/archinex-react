@@ -1,8 +1,6 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
-
 import { overviewThreeTabs } from "@/public/data/overview-three-data";
 
 const OverviewThree = () => {

@@ -1,5 +1,4 @@
 import ProjectGrid from "./ProjectGrid";
-
 import type { ProjectCategory, ProjectItem } from "@/public/data/project-data";
 
 interface ProjectCategorySectionProps {

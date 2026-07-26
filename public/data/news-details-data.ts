@@ -1,5 +1,4 @@
 import type { StaticImageData } from "next/image";
-
 import posterSmall from "@/public/images/news/poster-sm.webp";
 import thumbLeft from "@/public/images/news/thumb-left.webp";
 import thumbRight from "@/public/images/news/thumb-right.webp";

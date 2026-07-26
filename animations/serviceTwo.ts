@@ -22,12 +22,6 @@ export function initServiceTwo(): () => void {
 
     if (!contents.length || !thumbs.length) return;
 
-    /*
-    |--------------------------------------------------------------------------
-    | Initial State
-    |--------------------------------------------------------------------------
-    */
-
     gsap.set(thumbs, {
       opacity: 0,
       y: 30,
@@ -41,12 +35,6 @@ export function initServiceTwo(): () => void {
       scale: 1,
       zIndex: 2,
     });
-
-    /*
-    |--------------------------------------------------------------------------
-    | Activate Service
-    |--------------------------------------------------------------------------
-    */
 
     const activateService = (index: number) => {
       contents.forEach((item, i) => {
@@ -77,37 +65,18 @@ export function initServiceTwo(): () => void {
         }
       });
 
-      /*
-      |--------------------------------------------------------------------------
-      | Restart Progress Line
-      |--------------------------------------------------------------------------
-      */
-
       const line = contents[index]?.querySelector<HTMLElement>(".line");
 
       if (line) {
         line.style.animation = "none";
 
-        // Force browser reflow
         void line.offsetHeight;
 
         line.style.animation = "";
       }
     };
 
-    /*
-    |--------------------------------------------------------------------------
-    | Initial Active Item
-    |--------------------------------------------------------------------------
-    */
-
     activateService(0);
-
-    /*
-    |--------------------------------------------------------------------------
-    | Click Events
-    |--------------------------------------------------------------------------
-    */
 
     const handlers: Array<() => void> = [];
 
@@ -122,12 +91,6 @@ export function initServiceTwo(): () => void {
         item.removeEventListener("click", handleClick);
       });
     });
-
-    /*
-    |--------------------------------------------------------------------------
-    | ScrollTrigger Pin
-    |--------------------------------------------------------------------------
-    */
 
     let trigger: ScrollTrigger | undefined;
 

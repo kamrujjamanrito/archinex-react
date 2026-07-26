@@ -32,8 +32,24 @@ export const workProcessSteps: ProcessStep[] = [
 ];
 
 export const serviceFeatures: ServiceFeature[] = [
-  { id: 1, icon: "/images/icons/one.svg", label: "Schematic & detailed design" },
-  { id: 2, icon: "/images/icons/two.svg", label: "Concept design & feasibility studies" },
-  { id: 3, icon: "/images/icons/three.svg", label: "Planning & permitting support" },
-  { id: 4, icon: "/images/icons/four.svg", label: "Site supervision and project coordination" },
+  {
+    id: 1,
+    icon: "/images/icons/one.svg",
+    label: "Schematic & detailed design",
+  },
+  {
+    id: 2,
+    icon: "/images/icons/two.svg",
+    label: "Concept design & feasibility studies",
+  },
+  {
+    id: 3,
+    icon: "/images/icons/three.svg",
+    label: "Planning & permitting support",
+  },
+  {
+    id: 4,
+    icon: "/images/icons/four.svg",
+    label: "Site supervision and project coordination",
+  },
 ];

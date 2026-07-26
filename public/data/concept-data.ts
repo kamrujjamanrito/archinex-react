@@ -1,7 +1,5 @@
 import type { ConceptData } from "@/types/concept";
-
 import thumbLg from "@/public/images/concept/thumb-lg.webp";
-
 import thumbSmOne from "@/public/images/concept/thumb-sm.webp";
 import thumbSmTwo from "@/public/images/concept/thumb-sm-two.webp";
 import thumbSmThree from "@/public/images/concept/thumb-sm-three.webp";
@@ -10,8 +8,7 @@ import thumbSmFour from "@/public/images/concept/thumb-sm-four.webp";
 export const conceptData: ConceptData = {
   intro: "/ Our Works",
 
-  heading:
-    "Creating concepts to final details — we bring dream home to life.",
+  heading: "Creating concepts to final details — we bring dream home to life.",
 
   cta: {
     label: "Discover All",

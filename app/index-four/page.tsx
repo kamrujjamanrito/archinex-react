@@ -1,17 +1,21 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import HeaderFour from "@/components/layout/header/HeaderFour";
-import FooterFour from "@/components/layout/footer/FooterFour";
 import HeroSectionFour from "@/components/layout/banner/HeroSectionFour";
 import AboutSectionFour from "@/components/containers/AboutSectionFour";
 import ServiceSectionFour from "@/components/containers/ServiceSectionFour";
-import ProjectFour from "@/components/containers/ProjectFour";
 import Creative from "@/components/containers/Creative";
 import CounterTwo from "@/components/containers/CounterTwo";
-import OverviewThree from "@/components/containers/OverviewThree";
 import Marquee from "@/components/containers/Marquee";
 import NewsFour from "@/components/containers/NewsFour";
+import FooterFour from "@/components/layout/footer/FooterFour";
 
+const ProjectFour = dynamic(
+  () => import("@/components/containers/ProjectFour"),
+);
+const OverviewThree = dynamic(
+  () => import("@/components/containers/OverviewThree"),
+);
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 
 export const generateMetadata = async (): Promise<Metadata> => ({

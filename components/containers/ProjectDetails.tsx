@@ -1,8 +1,6 @@
 import Link from "next/link";
-
 import ProjectGalleryItem from "../widgets/project/ProjectGalleryItem";
 import ProjectMeta from "../widgets/project/ProjectMeta";
-
 import { projectDetailsData } from "@/public/data/project-details-data";
 
 const ProjectDetails = () => {

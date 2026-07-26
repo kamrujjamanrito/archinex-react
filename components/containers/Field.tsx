@@ -1,11 +1,7 @@
 "use client";
-
 import { useEffect } from "react";
-
 import { fieldData } from "@/public/data/field-data";
-
 import { initField } from "@/animations/field";
-
 import FieldItem from "@/components/widgets/FieldItem";
 
 const Field = () => {

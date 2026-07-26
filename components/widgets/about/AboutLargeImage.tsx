@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-
 import { aboutTwoData } from "@/public/data/about-two-data";
 
 const AboutLargeImage = () => {
@@ -16,12 +14,7 @@ const AboutLargeImage = () => {
         data-speedin="1"
         data-speedout="1"
       >
-        <Image
-          src={large.src}
-          alt={large.alt}
-          className="flip-img"
-          priority
-        />
+        <Image src={large.src} alt={large.alt} className="flip-img" priority />
       </div>
     </div>
   );

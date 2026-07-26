@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { popularTags } from "@/public/data/news-list-data";
 
 const SidebarTags = () => {

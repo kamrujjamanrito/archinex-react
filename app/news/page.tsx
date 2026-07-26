@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footer/Footer";
 import Vision from "@/components/containers/Vision";
+import Footer from "@/components/layout/footer/Footer";
 
 const NewsSection = dynamic(
   () => import("@/components/containers/NewsSection"),

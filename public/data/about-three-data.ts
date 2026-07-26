@@ -1,5 +1,4 @@
 import { AboutThreeData } from "@/types/about-three";
-
 import aboutFour from "@/public/images/about/four.webp";
 import aboutFive from "@/public/images/about/five.webp";
 import arrowThree from "@/public/images/arrow-3.webp";
@@ -10,7 +9,6 @@ export const aboutThreeData: AboutThreeData = {
     highlights: ["refinement", "innovation", "craftsmanship", "architects"],
     after: "converge with our expert",
   },
-
 
   contacts: [
     {

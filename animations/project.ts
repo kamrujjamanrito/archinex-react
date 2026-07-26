@@ -8,12 +8,6 @@ export function initProject(): () => void {
   }
 
   const ctx = gsap.context(() => {
-    /*
-    |--------------------------------------------------------------------------
-    | Project Header Animation
-    |--------------------------------------------------------------------------
-    */
-
     const title = document.querySelector(".project-title");
 
     if (title) {
@@ -65,59 +59,39 @@ export function initProject(): () => void {
         );
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Desktop Only
-    |--------------------------------------------------------------------------
-    */
-
     const mm = gsap.matchMedia();
 
     mm.add("(min-width:992px)", () => {
-      const sections =
-        gsap.utils.toArray<HTMLElement>(".project__single");
+      const sections = gsap.utils.toArray<HTMLElement>(".project__single");
 
       const refreshHeights = () => {
         sections.forEach((section) => {
-          const intro =
-            section.querySelector<HTMLElement>(
-              ".project__single-intro",
-            );
+          const intro = section.querySelector<HTMLElement>(
+            ".project__single-intro",
+          );
 
-          const thumb =
-            section.querySelector<HTMLElement>(
-              ".project__single-thumb",
-            );
+          const thumb = section.querySelector<HTMLElement>(
+            ".project__single-thumb",
+          );
 
           if (!intro || !thumb) return;
 
-          const thumbHeight =
-            window.innerHeight - (intro.offsetHeight + 20);
+          const thumbHeight = window.innerHeight - (intro.offsetHeight + 20);
 
           thumb.style.height = `${thumbHeight}px`;
 
-          gsap.set(
-            section.querySelectorAll(".char.odd"),
-            {
-              y: thumbHeight / 2,
-            },
-          );
+          gsap.set(section.querySelectorAll(".char.odd"), {
+            y: thumbHeight / 2,
+          });
         });
 
         ScrollTrigger.refresh();
       };
 
-      /*
-      |--------------------------------------------------------------------------
-      | Split Overlay Title
-      |--------------------------------------------------------------------------
-      */
-
       sections.forEach((section) => {
-        const heading =
-          section.querySelector<HTMLElement>(
-            ".project__single-content .title-xl",
-          );
+        const heading = section.querySelector<HTMLElement>(
+          ".project__single-content .title-xl",
+        );
 
         if (!heading) return;
 
@@ -128,9 +102,7 @@ export function initProject(): () => void {
         [...text].forEach((letter, index) => {
           const span = document.createElement("span");
 
-          span.className = `char ${
-            index % 2 === 0 ? "even" : "odd"
-          }`;
+          span.className = `char ${index % 2 === 0 ? "even" : "odd"}`;
 
           span.textContent = letter;
 
@@ -138,36 +110,24 @@ export function initProject(): () => void {
         });
       });
 
-      /*
-      |--------------------------------------------------------------------------
-      | Pin Sections
-      |--------------------------------------------------------------------------
-      */
-
       sections.forEach((section) => {
-        const intro =
-          section.querySelector<HTMLElement>(
-            ".project__single-intro",
-          );
+        const intro = section.querySelector<HTMLElement>(
+          ".project__single-intro",
+        );
 
-        const thumb =
-          section.querySelector<HTMLElement>(
-            ".project__single-thumb",
-          );
+        const thumb = section.querySelector<HTMLElement>(
+          ".project__single-thumb",
+        );
 
-        const image =
-          thumb?.querySelector<HTMLImageElement>("img");
+        const image = thumb?.querySelector<HTMLImageElement>("img");
 
-        const charsOdd =
-          section.querySelectorAll(".char.odd");
+        const charsOdd = section.querySelectorAll(".char.odd");
 
-        const charsEven =
-          section.querySelectorAll(".char.even");
+        const charsEven = section.querySelectorAll(".char.even");
 
         if (!intro || !thumb || !image) return;
 
-        const thumbHeight =
-          window.innerHeight - (intro.offsetHeight + 20);
+        const thumbHeight = window.innerHeight - (intro.offsetHeight + 20);
 
         thumb.style.height = `${thumbHeight}px`;
 
@@ -184,16 +144,17 @@ export function initProject(): () => void {
           scaleY: 1,
         });
 
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "+=90%",
-            scrub: true,
-            pin: true,
-            pinSpacing: true,
-          },
-        })
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: section,
+              start: "top top",
+              end: "+=90%",
+              scrub: true,
+              pin: true,
+              pinSpacing: true,
+            },
+          })
           .to(
             charsOdd,
             {
@@ -215,16 +176,10 @@ export function initProject(): () => void {
 
       refreshHeights();
 
-      window.addEventListener(
-        "resize",
-        refreshHeights,
-      );
+      window.addEventListener("resize", refreshHeights);
 
       return () => {
-        window.removeEventListener(
-          "resize",
-          refreshHeights,
-        );
+        window.removeEventListener("resize", refreshHeights);
       };
     });
   });

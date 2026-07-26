@@ -1,7 +1,5 @@
 "use client";
-
 import Link from "next/link";
-
 import { aboutTwoData } from "@/public/data/about-two-data";
 
 const AboutIntro = () => {
@@ -28,10 +26,7 @@ const AboutIntro = () => {
           </p>
 
           <div className="mt-60">
-            <Link
-              href={intro.button.href}
-              className="btn-light-2"
-            >
+            <Link href={intro.button.href} className="btn-light-2">
               <span
                 className="btn-animated-text"
                 data-text={intro.button.label}

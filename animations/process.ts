@@ -112,7 +112,6 @@ export function initProcess(): () => void {
       startProgress();
     };
 
-    // Store handlers so they can be removed later
     const handlers = tabs.map((tab, index) => {
       const handler = () => activateTab(index);
       tab.addEventListener("mouseenter", handler);

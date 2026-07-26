@@ -20,16 +20,9 @@ export function initWorkTwo(
 
     let current = 0;
 
-    // Browser timer id
     let timer = -1;
 
     const handlers = new Map<HTMLElement, EventListener>();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Initial State
-    |--------------------------------------------------------------------------
-    */
 
     gsap.set(thumbs, {
       opacity: 0,
@@ -42,12 +35,6 @@ export function initWorkTwo(
       opacity: 0,
       y: 20,
     });
-
-    /*
-    |--------------------------------------------------------------------------
-    | Activate Tab
-    |--------------------------------------------------------------------------
-    */
 
     const activateTab = (index: number) => {
       current = index;
@@ -78,12 +65,6 @@ export function initWorkTwo(
       });
     };
 
-    /*
-    |--------------------------------------------------------------------------
-    | Auto Play
-    |--------------------------------------------------------------------------
-    */
-
     const nextTab = () => {
       activateTab((current + 1) % tabs.length);
     };
@@ -105,12 +86,6 @@ export function initWorkTwo(
       startTimer();
     };
 
-    /*
-    |--------------------------------------------------------------------------
-    | Mouse Hover
-    |--------------------------------------------------------------------------
-    */
-
     tabs.forEach((tab, index) => {
       const handleMouseEnter: EventListener = () => {
         activateTab(index);
@@ -123,12 +98,6 @@ export function initWorkTwo(
 
     activateTab(0);
     startTimer();
-
-    /*
-    |--------------------------------------------------------------------------
-    | ScrollTrigger
-    |--------------------------------------------------------------------------
-    */
 
     const mm = gsap.matchMedia();
 
@@ -149,12 +118,6 @@ export function initWorkTwo(
         trigger.kill();
       };
     });
-
-    /*
-    |--------------------------------------------------------------------------
-    | Cleanup
-    |--------------------------------------------------------------------------
-    */
 
     return () => {
       stopTimer();

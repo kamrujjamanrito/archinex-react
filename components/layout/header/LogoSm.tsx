@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useTheme } from "@/hooks/useTheme";
-
 import logo from "@/public/images/logo-sm.svg";
 import logoDark from "@/public/images/logo-sm-light.svg";
 

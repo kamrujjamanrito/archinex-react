@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { PartnerItem as PartnerItemType } from "@/public/data/partner-data";
 
 interface PartnerItemProps {

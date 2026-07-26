@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footer/Footer";
 import HeroSection from "@/components/layout/banner/HeroSection";
 import Overview from "@/components/containers/Overview";
 import AboutSection from "@/components/containers/AboutSection";
@@ -10,12 +9,15 @@ import Work from "@/components/containers/Work";
 import ServiceSection from "@/components/containers/ServiceSection";
 import OverviewTwo from "@/components/containers/OverviewTwo";
 import Partner from "@/components/containers/Partner";
-import Vision from "@/components/containers/Vision";
-import Testimonial from "@/components/containers/Testimonial";
 import ProcessTwo from "@/components/containers/ProcessTwo";
+import Vision from "@/components/containers/Vision";
+import Footer from "@/components/layout/footer/Footer";
 
 const VideoSection = dynamic(
   () => import("@/components/containers/VideoSection"),
+);
+const Testimonial = dynamic(
+  () => import("@/components/containers/Testimonial"),
 );
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 

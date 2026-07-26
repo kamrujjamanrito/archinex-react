@@ -2,7 +2,6 @@ import teamOne from "@/public/images/team/one.webp";
 import teamTwo from "@/public/images/team/two.webp";
 import teamThree from "@/public/images/team/three.webp";
 import teamFour from "@/public/images/team/four.webp";
-
 import type { StaticImageData } from "next/image";
 
 export interface TeamMember {

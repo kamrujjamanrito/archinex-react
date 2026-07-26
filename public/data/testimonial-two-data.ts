@@ -2,7 +2,6 @@ import avatarFour from "@/public/images/avatar/four.webp";
 import avatarFive from "@/public/images/avatar/five.webp";
 import avatarSix from "@/public/images/avatar/six.webp";
 import avatarSeven from "@/public/images/avatar/seven.webp";
-
 import type { TestimonialTwoData } from "@/types/testimonial-two";
 
 export const testimonialTwoData: TestimonialTwoData = {

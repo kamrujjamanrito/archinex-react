@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { ServiceItem } from "@/public/data/service-data";
 
 interface ServiceThumbProps {

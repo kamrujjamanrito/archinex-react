@@ -1,7 +1,5 @@
 "use client";
-
 import Link from "next/link";
-
 import type { FieldItem as FieldItemType } from "@/types/field";
 
 interface FieldItemProps {

@@ -1,6 +1,5 @@
 import heroThumb from "@/public/images/hero-two-thumb.webp";
 import arrow from "@/public/images/lg-arrow.webp";
-
 import type { HeroTwoData } from "@/types/hero-two";
 
 export const heroTwoData: HeroTwoData = {
@@ -11,11 +10,7 @@ export const heroTwoData: HeroTwoData = {
       brand: "Archinex",
       firstLine: "visionary",
       separator: "/",
-      words: [
-        "inspiring",
-        "motivated",
-        "passion",
-      ],
+      words: ["inspiring", "motivated", "passion"],
       lastLine: "architecture studio.",
     },
 

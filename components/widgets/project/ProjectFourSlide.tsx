@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import type { ProjectFourItem } from "@/public/data/project-four-data";
 
 interface ProjectFourSlideProps {

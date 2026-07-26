@@ -1,9 +1,7 @@
 "use client";
-
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { initConcept } from "@/animations/concept";
 import { conceptData } from "@/public/data/concept-data";
 

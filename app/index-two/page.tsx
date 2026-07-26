@@ -1,19 +1,29 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import HeaderTwo from "@/components/layout/header/HeaderTwo";
-import FooterTwo from "@/components/layout/footer/FooterTwo";
-import HeroSectionTwo from "@/components/layout/banner/HeroSectionTwo";
-import AboutSectionTwo from "@/components/containers/AboutSectionTwo";
 import PartnerThree from "@/components/containers/PartnerThree";
-import ServiceSectionTwo from "@/components/containers/ServiceSectionTwo";
-import Field from "@/components/containers/Field";
 import CounterThree from "@/components/containers/CounterThree";
-import Concept from "@/components/containers/Concept";
-import Team from "@/components/containers/Team";
 import Transform from "@/components/containers/Transform";
-import NewsSectionTwo from "@/components/containers/NewsSectionTwo";
-import InstagramFeed from "@/components/containers/InstagramFeed";
+import FooterTwo from "@/components/layout/footer/FooterTwo";
 
+const HeroSectionTwo = dynamic(
+  () => import("@/components/layout/banner/HeroSectionTwo"),
+);
+const AboutSectionTwo = dynamic(
+  () => import("@/components/containers/AboutSectionTwo"),
+);
+const ServiceSectionTwo = dynamic(
+  () => import("@/components/containers/ServiceSectionTwo"),
+);
+const Field = dynamic(() => import("@/components/containers/Field"));
+const Team = dynamic(() => import("@/components/containers/Team"));
+const Concept = dynamic(() => import("@/components/containers/Concept"));
+const NewsSectionTwo = dynamic(
+  () => import("@/components/containers/NewsSectionTwo"),
+);
+const InstagramFeed = dynamic(
+  () => import("@/components/containers/InstagramFeed"),
+);
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 
 export const generateMetadata = async (): Promise<Metadata> => ({

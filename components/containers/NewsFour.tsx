@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { newsFourData } from "@/public/data/news-four-data";
 
 const NewsFour = () => {

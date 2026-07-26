@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
 import Banner from "@/components/layout/banner/Banner";
 import NewsList from "@/components/containers/NewsList";
-import Vision from "@/components/containers/Vision";
 import Footer from "@/components/layout/footer/Footer";
+import Vision from "@/components/containers/Vision";
 
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 

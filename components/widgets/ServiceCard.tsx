@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { ServiceItem } from "@/public/data/service-data";
 
 interface ServiceCardProps {

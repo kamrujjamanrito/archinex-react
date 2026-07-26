@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import { sidebarCategories } from "@/public/data/news-list-data";
 
 const SidebarCategories = () => {

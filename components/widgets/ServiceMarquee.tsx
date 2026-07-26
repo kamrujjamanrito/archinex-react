@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import flower from "@/public/images/flower.webp";
 
 const MARQUEE_COUNT = 3;

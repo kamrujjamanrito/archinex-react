@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { newsBanner, newsFilters, NewsFilter } from "@/public/data/news-data";
 
 interface NewsBannerProps {

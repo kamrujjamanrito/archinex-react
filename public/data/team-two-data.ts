@@ -1,5 +1,4 @@
 import type { TeamTwoData } from "@/types/team-two";
-
 import teamOne from "@/public/images/team/tm-one.webp";
 import teamTwo from "@/public/images/team/five.webp";
 import teamThree from "@/public/images/team/tm-two.webp";

@@ -12,9 +12,7 @@ export function initConcept(): () => void {
 
     if (!section) return;
 
-    const items = gsap.utils.toArray<HTMLElement>(
-      ".concept__thumb-single",
-    );
+    const items = gsap.utils.toArray<HTMLElement>(".concept__thumb-single");
 
     const footerItems = gsap.utils.toArray<HTMLElement>(
       ".concept__right-footer",
@@ -37,12 +35,6 @@ export function initConcept(): () => void {
       return;
     }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Wait Fonts
-    |--------------------------------------------------------------------------
-    */
-
     const init = async () => {
       if ("fonts" in document) {
         await document.fonts.ready;
@@ -50,23 +42,11 @@ export function initConcept(): () => void {
 
       ScrollTrigger.refresh();
 
-      /*
-      |--------------------------------------------------------------------------
-      | Footer Height
-      |--------------------------------------------------------------------------
-      */
-
       const footerHeight = footerItems[0].offsetHeight;
 
       gsap.set(footerWrapper, {
         height: footerHeight,
       });
-
-      /*
-      |--------------------------------------------------------------------------
-      | Initial State
-      |--------------------------------------------------------------------------
-      */
 
       gsap.set(footerItems, {
         y: footerHeight,
@@ -85,12 +65,6 @@ export function initConcept(): () => void {
         x: 20,
         color: "#000",
       });
-
-      /*
-      |--------------------------------------------------------------------------
-      | Timeline
-      |--------------------------------------------------------------------------
-      */
 
       const tl = gsap.timeline({
         scrollTrigger: {

@@ -13,17 +13,10 @@ export const initService = () => {
     const services = gsap.utils.toArray<HTMLElement>(".service__list-single");
     const thumbs = gsap.utils.toArray<HTMLElement>(".service__thumb-single");
 
-    const serviceInner =
-      wrapper.querySelector<HTMLElement>(".service__inner");
-    const serviceThumb =
-      wrapper.querySelector<HTMLElement>(".service__thumb");
+    const serviceInner = wrapper.querySelector<HTMLElement>(".service__inner");
+    const serviceThumb = wrapper.querySelector<HTMLElement>(".service__thumb");
 
-    if (
-      !services.length ||
-      !thumbs.length ||
-      !serviceInner ||
-      !serviceThumb
-    ) {
+    if (!services.length || !thumbs.length || !serviceInner || !serviceThumb) {
       return;
     }
 

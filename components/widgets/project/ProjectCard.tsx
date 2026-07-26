@@ -1,7 +1,5 @@
 import Link from "next/link";
-
 import HoverImage from "../HoverImage";
-
 import type { ProjectItem } from "@/public/data/project-data";
 
 interface ProjectCardProps {

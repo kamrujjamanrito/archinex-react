@@ -2,7 +2,6 @@ import ServiceCard from "../widgets/ServiceCard";
 import ServiceIntro from "../widgets/ServiceIntro";
 import ServiceMarquee from "../widgets/ServiceMarquee";
 import ServiceThumb from "../widgets/ServiceThumb";
-
 import { serviceData } from "@/public/data/service-data";
 
 interface ServiceSectionProps {

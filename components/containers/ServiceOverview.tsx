@@ -14,11 +14,7 @@ const ServiceOverview = () => {
                   {...(delay && { "data-delay": delay })}
                 >
                   <div className="thumb">
-                    <Image
-                      src={image}
-                      alt={title}
-                      priority
-                    />
+                    <Image src={image} alt={title} priority />
                   </div>
                   <div className="content">
                     <h2 className="title-xxs title-animation fw-5">{title}</h2>

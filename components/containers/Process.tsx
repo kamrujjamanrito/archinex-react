@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import HoverImage from "../widgets/HoverImage";
-
 import { processData } from "@/public/data/process-two-data";
 import { hoverEffectConfig } from "@/constants/hoverEffect";
 

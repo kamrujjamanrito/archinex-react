@@ -1,5 +1,4 @@
 import type { WorkTwoData } from "@/types/work-two";
-
 import workEight from "@/public/images/work/eight.webp";
 import workNine from "@/public/images/work/nine.webp";
 import workTen from "@/public/images/work/ten.webp";

@@ -1,9 +1,7 @@
 "use client";
-
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { teamTwoData } from "@/public/data/team-two-data";
 import { initTeamTwo } from "@/animations/teamTwo";
 
@@ -50,7 +48,7 @@ export default function TeamThree() {
             <div className="col-12 col-xl-7">
               <div className="team-two__lists">
                 <ul>
-                  {teamTwoData.members.map((member, index) => (
+                  {teamTwoData.members.map((member) => (
                     <li
                       key={member.id}
                       className={member.active ? "active" : ""}

@@ -1,16 +1,12 @@
 "use client";
-
 import { useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-
 import { gsap } from "@/lib/gsap";
 import { heroThreeData } from "@/public/data/hero-three-data";
-
 import "swiper/swiper-bundle.css";
 
 const toRoman = (num: number) => {

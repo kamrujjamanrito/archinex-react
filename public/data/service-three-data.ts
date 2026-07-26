@@ -1,5 +1,4 @@
 import type { ServiceThreeData } from "@/types/service-three";
-
 import serviceOne from "@/public/images/service-three/one.webp";
 import serviceTwo from "@/public/images/service-three/two.webp";
 import serviceThree from "@/public/images/service-three/three.webp";

@@ -8,69 +8,30 @@ export function initTeam(): () => void {
   }
 
   const ctx = gsap.context(() => {
-    const section =
-      document.querySelector<HTMLElement>(".team");
+    const section = document.querySelector<HTMLElement>(".team");
 
-    const wrapper =
-      document.querySelector<HTMLElement>(".team__wrapper");
+    const wrapper = document.querySelector<HTMLElement>(".team__wrapper");
 
-    const container =
-      document.querySelector<HTMLElement>(".team-container");
+    const container = document.querySelector<HTMLElement>(".team-container");
 
     if (!section || !wrapper || !container) return;
 
-    const items =
-      gsap.utils.toArray<HTMLElement>(".team__single");
+    const items = gsap.utils.toArray<HTMLElement>(".team__single");
 
     if (!items.length) return;
 
     const init = async () => {
-      /*
-      |--------------------------------------------------------------------------
-      | Wait Fonts
-      |--------------------------------------------------------------------------
-      */
-
       if ("fonts" in document) {
         await document.fonts.ready;
       }
 
-      /*
-      |--------------------------------------------------------------------------
-      | Refresh Previous Pins
-      |--------------------------------------------------------------------------
-      */
-
       ScrollTrigger.refresh();
 
-      /*
-      |--------------------------------------------------------------------------
-      | Initial State
-      |--------------------------------------------------------------------------
-      */
-
       items.forEach((item, index) => {
-        item.classList.toggle(
-          "active",
-          index === 0,
-        );
+        item.classList.toggle("active", index === 0);
       });
 
-      /*
-      |--------------------------------------------------------------------------
-      | Scroll Amount
-      |--------------------------------------------------------------------------
-      */
-
-      const getScrollAmount = () =>
-        wrapper.scrollWidth -
-        container.offsetWidth;
-
-      /*
-      |--------------------------------------------------------------------------
-      | Animation
-      |--------------------------------------------------------------------------
-      */
+      const getScrollAmount = () => wrapper.scrollWidth - container.offsetWidth;
 
       const tween = gsap.to(wrapper, {
         x: () => -getScrollAmount(),
@@ -92,15 +53,10 @@ export function initTeam(): () => void {
           anticipatePin: 1,
 
           onUpdate: ({ progress }) => {
-            const index = Math.round(
-              progress * (items.length - 1),
-            );
+            const index = Math.round(progress * (items.length - 1));
 
             items.forEach((item, i) => {
-              item.classList.toggle(
-                "active",
-                i === index,
-              );
+              item.classList.toggle("active", i === index);
             });
           },
         },

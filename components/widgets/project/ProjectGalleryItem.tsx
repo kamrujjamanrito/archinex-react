@@ -1,5 +1,4 @@
 import HoverImage from "../HoverImage";
-
 import { ProjectGalleryItem as GalleryItem } from "@/types/project-details.types";
 
 interface Props {

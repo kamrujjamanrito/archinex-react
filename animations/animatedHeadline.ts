@@ -2,8 +2,8 @@
 
 import { gsap } from "@/lib/gsap";
 
-const DISPLAY_DURATION = 3; // seconds each word stays visible
-const CLIP_DURATION = 0.6; // seconds
+const DISPLAY_DURATION = 3;
+const CLIP_DURATION = 0.6;
 
 export function initAnimatedHeadline(): () => void {
   if (typeof window === "undefined") {
@@ -11,29 +11,20 @@ export function initAnimatedHeadline(): () => void {
   }
 
   const ctx = gsap.context(() => {
-    const headlines = gsap.utils.toArray<HTMLElement>(
-      ".cd-headline.clip",
-    );
+    const headlines = gsap.utils.toArray<HTMLElement>(".cd-headline.clip");
 
     if (!headlines.length) return;
 
     const timelines: gsap.core.Timeline[] = [];
 
     const init = async () => {
-      /*
-      |--------------------------------------------------------------------------
-      | Wait For Fonts
-      |--------------------------------------------------------------------------
-      */
-
       if ("fonts" in document) {
         await document.fonts.ready;
       }
 
       headlines.forEach((headline) => {
-        const wrapper = headline.querySelector<HTMLElement>(
-          ".cd-words-wrapper",
-        );
+        const wrapper =
+          headline.querySelector<HTMLElement>(".cd-words-wrapper");
 
         if (!wrapper) return;
 
@@ -42,12 +33,6 @@ export function initAnimatedHeadline(): () => void {
         );
 
         if (words.length <= 1) return;
-
-        /*
-        |--------------------------------------------------------------------------
-        | Initial State
-        |--------------------------------------------------------------------------
-        */
 
         words.forEach((word, index) => {
           word.classList.toggle("is-visible", index === 0);
@@ -66,12 +51,6 @@ export function initAnimatedHeadline(): () => void {
           overflow: "hidden",
         });
 
-        /*
-        |--------------------------------------------------------------------------
-        | Timeline
-        |--------------------------------------------------------------------------
-        */
-
         const tl = gsap.timeline({
           repeat: -1,
         });
@@ -79,17 +58,14 @@ export function initAnimatedHeadline(): () => void {
         words.forEach((current, index) => {
           const next = words[(index + 1) % words.length];
 
-          // Keep current word visible
           tl.to({}, { duration: DISPLAY_DURATION });
 
-          // Close clip
           tl.to(wrapper, {
             width: 2,
             duration: CLIP_DURATION,
             ease: "power2.inOut",
           });
 
-          // Swap words
           tl.call(() => {
             current.classList.remove("is-visible");
             current.classList.add("is-hidden");
@@ -108,7 +84,6 @@ export function initAnimatedHeadline(): () => void {
             });
           });
 
-          // Open clip
           tl.to(wrapper, {
             width: next.offsetWidth + 10,
             duration: CLIP_DURATION,

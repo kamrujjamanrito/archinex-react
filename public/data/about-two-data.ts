@@ -1,7 +1,6 @@
 import aboutOne from "@/public/images/about/one.webp";
 import aboutTwo from "@/public/images/about/two.webp";
 import aboutThree from "@/public/images/about/three.webp";
-
 import type { AboutTwoData } from "@/types/about-two";
 
 export const aboutTwoData: AboutTwoData = {
@@ -39,8 +38,7 @@ export const aboutTwoData: AboutTwoData = {
   },
 
   content: {
-    title:
-      "Archinex builds Houses — Buildings everyone would like to live in.",
+    title: "Archinex builds Houses — Buildings everyone would like to live in.",
 
     description:
       "We take visionary approach to sales and marketing of real estate development, delivering exceptional result. Our deep knowledge - access to cutting edge research set us apart in the industry.",

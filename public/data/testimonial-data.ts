@@ -1,5 +1,4 @@
 import type { StaticImageData } from "next/image";
-
 import logo from "@/public/images/testimonial/dummy-logo.webp";
 
 export interface TestimonialItem {

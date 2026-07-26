@@ -1,8 +1,6 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import HeaderLight from "@/components/layout/header/HeaderLight";
-import Footer from "@/components/layout/footer/Footer";
-import Vision from "@/components/containers/Vision";
 import AboutBanner from "@/components/layout/banner/AboutBanner";
 import AboutSection from "@/components/containers/AboutSection";
 import AboutOverview from "@/components/containers/AboutOverview";
@@ -10,6 +8,8 @@ import ServiceSection from "@/components/containers/ServiceSection";
 import OverviewTwo from "@/components/containers/OverviewTwo";
 import Partner from "@/components/containers/Partner";
 import TeamTwo from "@/components/containers/TeamTwo";
+import Vision from "@/components/containers/Vision";
+import Footer from "@/components/layout/footer/Footer";
 
 const Testimonial = dynamic(
   () => import("@/components/containers/Testimonial"),

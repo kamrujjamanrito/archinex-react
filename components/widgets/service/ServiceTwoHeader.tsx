@@ -1,5 +1,4 @@
 "use client";
-
 import { serviceTwoData } from "@/public/data/service-two-data";
 
 const ServiceTwoHeader = () => {

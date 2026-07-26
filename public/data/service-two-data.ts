@@ -4,7 +4,6 @@ import serviceThumbFour from "@/public/images/services/service-thumb-four.webp";
 import serviceThumbFive from "@/public/images/services/service-thumb-five.webp";
 import serviceThumbSix from "@/public/images/services/service-thumb-six.webp";
 import serviceThumbSeven from "@/public/images/services/service-thumb-seven.webp";
-
 import type { ServiceTwoData } from "@/types/service-two";
 
 export const serviceTwoData: ServiceTwoData = {

@@ -4,7 +4,6 @@ import fieldThree from "@/public/images/field/three.webp";
 import fieldFour from "@/public/images/field/four.webp";
 import fieldFive from "@/public/images/field/five.webp";
 import fieldSix from "@/public/images/field/six.webp";
-
 import type { FieldData } from "@/types/field";
 
 export const fieldData: FieldData = {

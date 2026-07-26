@@ -1,8 +1,6 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
-
 import { projectData } from "@/public/data/project-two-data";
 
 const Project = () => {

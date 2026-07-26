@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import quote from "@/public/images/testimonial/quote.webp";
-
 import { testimonialData } from "@/public/data/testimonial-data";
 
 const Testimonial = () => {

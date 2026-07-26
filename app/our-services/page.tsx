@@ -1,14 +1,16 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import HeaderLight from "@/components/layout/header/HeaderLight";
-import Footer from "@/components/layout/footer/Footer";
 import ServiceBanner from "@/components/layout/banner/ServiceBanner";
 import ServiceOverview from "@/components/containers/ServiceOverview";
 import ServiceSection from "@/components/containers/ServiceSection";
-import Testimonial from "@/components/containers/Testimonial";
-import Vision from "@/components/containers/Vision";
 import Process from "@/components/containers/Process";
+import Vision from "@/components/containers/Vision";
+import Footer from "@/components/layout/footer/Footer";
 
+const Testimonial = dynamic(
+  () => import("@/components/containers/Testimonial"),
+);
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 
 export const generateMetadata = async (): Promise<Metadata> => ({
@@ -47,7 +49,7 @@ const page = () => {
       <ServiceSection />
       <Process />
       <Testimonial />
-      <Vision/>
+      <Vision />
       <Footer />
       <ClientWrapper />
     </div>

@@ -1,10 +1,8 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
 import Isotope from "isotope-layout";
 import NewsBanner from "@/components/layout/banner/NewsBanner";
 import NewsCard from "../widgets/news/NewsCard";
-
 import { newsData, type NewsFilter } from "@/public/data/news-data";
 
 const NewsSectionClient = () => {

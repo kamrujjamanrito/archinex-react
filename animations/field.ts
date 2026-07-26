@@ -8,12 +8,6 @@ export function initField(): () => void {
   }
 
   const ctx = gsap.context(() => {
-    /*
-    |--------------------------------------------------------------------------
-    | Desktop Only
-    |--------------------------------------------------------------------------
-    */
-
     if (window.innerWidth <= 576) {
       return;
     }
@@ -29,12 +23,6 @@ export function initField(): () => void {
 
       if (!thumb) return;
 
-      /*
-      |--------------------------------------------------------------------------
-      | Position
-      |--------------------------------------------------------------------------
-      */
-
       let targetX = 0;
       let targetY = 0;
 
@@ -43,20 +31,8 @@ export function initField(): () => void {
 
       let animationFrame = 0;
 
-      /*
-      |--------------------------------------------------------------------------
-      | Quick Setter
-      |--------------------------------------------------------------------------
-      */
-
       const setX = gsap.quickSetter(thumb, "x", "px");
       const setY = gsap.quickSetter(thumb, "y", "px");
-
-      /*
-      |--------------------------------------------------------------------------
-      | Animation Loop
-      |--------------------------------------------------------------------------
-      */
 
       const animate = () => {
         currentX += (targetX - currentX) * 0.1;
@@ -70,12 +46,6 @@ export function initField(): () => void {
 
       animate();
 
-      /*
-      |--------------------------------------------------------------------------
-      | Mouse Move
-      |--------------------------------------------------------------------------
-      */
-
       const handleMouseMove = (event: MouseEvent) => {
         const rect = item.getBoundingClientRect();
 
@@ -84,12 +54,6 @@ export function initField(): () => void {
       };
 
       item.addEventListener("mousemove", handleMouseMove);
-
-      /*
-      |--------------------------------------------------------------------------
-      | Cleanup
-      |--------------------------------------------------------------------------
-      */
 
       cleanups.push(() => {
         cancelAnimationFrame(animationFrame);

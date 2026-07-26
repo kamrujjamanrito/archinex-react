@@ -1,7 +1,5 @@
 "use client";
-
 import Image from "next/image";
-
 import { serviceTwoData } from "@/public/data/service-two-data";
 
 const ServiceTwoThumbs = () => {

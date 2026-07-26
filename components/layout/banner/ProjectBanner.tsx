@@ -1,10 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import Image from "next/image";
-
 import building from "@/public/images/building.webp";
-
 import { projectTabsData } from "@/public/data/project-tabs-data";
 import type { ProjectCategory, ProjectGroup } from "@/public/data/project-data";
 
@@ -63,7 +60,6 @@ const ProjectBanner = ({
                         onTabChange(tab.key);
                         onCategoryChange(tab.defaultCategory);
                       }}
-                      
                       className={`project-tab-btn fraunces text-xxl italic ${
                         activeTab === tab.key ? "active" : ""
                       }`}

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import type { ServiceFourItem as ServiceFourItemType } from "@/public/data/service-four-data";
 
 interface ServiceFourItemProps {

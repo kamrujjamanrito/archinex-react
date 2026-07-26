@@ -2,7 +2,6 @@ import residentialIcon from "@/public/images/icons/residential.svg";
 import commercialIcon from "@/public/images/icons/commercial.svg";
 import hospitalityIcon from "@/public/images/icons/hospitality.svg";
 import industrialIcon from "@/public/images/icons/industrial.svg";
-
 import { ServiceOverviewItem } from "@/types/service-overview.types";
 
 export const serviceOverviewData: ServiceOverviewItem[] = [

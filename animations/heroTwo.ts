@@ -17,29 +17,11 @@ export function initHeroTwo(): () => void {
 
     if (!heading || !thumb) return;
 
-    /*
-    |--------------------------------------------------------------------------
-    | RTL Detection
-    |--------------------------------------------------------------------------
-    */
-
     const isRTL =
       document.querySelector(".page-wrapper")?.classList.contains("rtl") ??
       false;
 
-    /*
-    |--------------------------------------------------------------------------
-    | Kill Existing Trigger (Hot Reload Safety)
-    |--------------------------------------------------------------------------
-    */
-
     ScrollTrigger.getById("heroTwo")?.kill();
-
-    /*
-    |--------------------------------------------------------------------------
-    | Timeline
-    |--------------------------------------------------------------------------
-    */
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -49,9 +31,6 @@ export function initHeroTwo(): () => void {
         end: "+=160%",
         scrub: true,
         invalidateOnRefresh: true,
-
-        // Uncomment for debugging
-        // markers: true,
       },
     });
 

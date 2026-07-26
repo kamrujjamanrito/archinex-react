@@ -1,7 +1,5 @@
 "use client";
-
 import Link from "next/link";
-
 import { serviceTwoData } from "@/public/data/service-two-data";
 
 const ServiceTwoContent = () => {
@@ -47,14 +45,8 @@ const ServiceTwoContent = () => {
       ))}
 
       <div className="mt-100 service-two__cta">
-        <Link
-          href="/our-services"
-          className="btn-quaternary"
-        >
-          <span
-            className="btn-animated-text"
-            data-text="Explore Services"
-          >
+        <Link href="/our-services" className="btn-quaternary">
+          <span className="btn-animated-text" data-text="Explore Services">
             Explore Services
           </span>
         </Link>

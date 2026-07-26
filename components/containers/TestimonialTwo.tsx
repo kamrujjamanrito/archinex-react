@@ -1,14 +1,11 @@
 "use client";
-
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-
 import { testimonialTwoData } from "@/public/data/testimonial-two-data";
 import { initTestimonialTwo } from "@/animations/testimonialTwo";
-
 import "swiper/css";
 import "swiper/css/effect-fade";
 

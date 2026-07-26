@@ -1,5 +1,4 @@
 import ProjectCard from "./ProjectCard";
-
 import type { ProjectItem, ProjectLayout } from "@/public/data/project-data";
 
 interface ProjectGridProps {
@@ -29,7 +28,6 @@ const ProjectGrid = ({ projects }: ProjectGridProps) => {
 
   return (
     <>
-
       <div className="row">
         <div className="col-12 col-md-4 col-xl-4 col-xxl-4">
           {layoutOne[0] && <ProjectCard project={layoutOne[0]} />}
@@ -39,7 +37,6 @@ const ProjectGrid = ({ projects }: ProjectGridProps) => {
           {layoutOne[1] && <ProjectCard project={layoutOne[1]} />}
         </div>
       </div>
-
 
       <div className="row mt-100 gutter-40">
         <div className="col-12 col-sm-6 col-xl-6">
@@ -57,13 +54,11 @@ const ProjectGrid = ({ projects }: ProjectGridProps) => {
         </div>
       </div>
 
-
       <div className="row mt-100">
         <div className="col-12">
           {layoutFour[0] && <ProjectCard project={layoutFour[0]} />}
         </div>
       </div>
-
 
       <div className="row mt-100">
         <div className="col-12">

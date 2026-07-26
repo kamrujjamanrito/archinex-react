@@ -1,9 +1,7 @@
 "use client";
-
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { initTeam } from "@/animations/team";
 import { teamData } from "@/public/data/team-three-data";
 
@@ -32,22 +30,14 @@ const Team = () => {
 
           <div className="col-12 col-lg-5 col-xl-4">
             <div className="team__content">
-              <p className="txt-light-6">
-                {description}
-              </p>
+              <p className="txt-light-6">{description}</p>
             </div>
           </div>
 
           <div className="col-12 col-lg-3 col-xl-3">
             <div className="team__cta">
-              <Link
-                href={button.href}
-                className="btn-quinary"
-              >
-                <span
-                  className="btn-animated-text"
-                  data-text={button.label}
-                >
+              <Link href={button.href} className="btn-quinary">
+                <span className="btn-animated-text" data-text={button.label}>
                   {button.label}
                 </span>
               </Link>
@@ -62,10 +52,7 @@ const Team = () => {
             <div className="team__inner">
               <div className="team__wrapper mt-80">
                 {members.map((member) => (
-                  <div
-                    key={member.id}
-                    className="team__single"
-                  >
+                  <div key={member.id} className="team__single">
                     <div className="team__thumb">
                       <Image
                         src={member.image.src}
@@ -75,9 +62,7 @@ const Team = () => {
 
                       <div className="team__name">
                         <h3 className="title-lg-sm fraunces italic">
-                          <Link href={member.href}>
-                            {member.name}
-                          </Link>
+                          <Link href={member.href}>{member.name}</Link>
                         </h3>
                       </div>
                     </div>

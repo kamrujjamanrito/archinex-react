@@ -1,8 +1,6 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
-
 import { newsData } from "@/public/data/news-two-data";
 
 const NewsSectionTwo = () => {

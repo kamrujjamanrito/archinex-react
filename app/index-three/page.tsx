@@ -1,19 +1,25 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import HeaderThree from "@/components/layout/header/HeaderThree";
-import FooterThree from "@/components/layout/footer/FooterThree";
-import HeroSectionThree from "@/components/layout/banner/HeroSectionThree";
 import AboutSectionThree from "@/components/containers/AboutSectionThree";
-import ServiceThree from "@/components/containers/ServiceThree";
-import Project from "@/components/containers/Project";
-import WorkTwo from "@/components/containers/WorkTwo";
-import TeamThree from "@/components/containers/TeamThree";
-import TestimonialTwo from "@/components/containers/TestimonialTwo";
 import PartnerTwo from "@/components/containers/PartnerTwo";
 import Newsletter from "@/components/containers/Newsletter";
+import FooterThree from "@/components/layout/footer/FooterThree";
 
+const HeroSectionThree = dynamic(
+  () => import("@/components/layout/banner/HeroSectionThree"),
+);
+const ServiceThree = dynamic(
+  () => import("@/components/containers/ServiceThree"),
+);
+const Project = dynamic(() => import("@/components/containers/Project"));
+const WorkTwo = dynamic(() => import("@/components/containers/WorkTwo"));
 const ProjectSlider = dynamic(
   () => import("@/components/containers/ProjectSlider"),
+);
+const TeamThree = dynamic(() => import("@/components/containers/TeamThree"));
+const TestimonialTwo = dynamic(
+  () => import("@/components/containers/TestimonialTwo"),
 );
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 

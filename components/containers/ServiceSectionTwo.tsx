@@ -1,9 +1,6 @@
 "use client";
-
 import { useEffect } from "react";
-
 import { initServiceTwo } from "@/animations/serviceTwo";
-
 import ServiceTwoHeader from "@/components/widgets/service/ServiceTwoHeader";
 import ServiceTwoContent from "@/components/widgets/service/ServiceTwoContent";
 import ServiceTwoThumbs from "@/components/widgets/service/ServiceTwoThumbs";

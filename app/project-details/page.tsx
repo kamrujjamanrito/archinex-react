@@ -1,10 +1,10 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footer/Footer";
 import ProjectDetailsBanner from "@/components/layout/banner/ProjectDetailsBanner";
-import Vision from "@/components/containers/Vision";
 import ProjectDetails from "@/components/containers/ProjectDetails";
+import Vision from "@/components/containers/Vision";
+import Footer from "@/components/layout/footer/Footer";
 
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 

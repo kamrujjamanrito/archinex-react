@@ -1,7 +1,5 @@
 "use client";
-
 import { useEffect } from "react";
-
 import { heroTwoData } from "@/public/data/hero-two-data";
 import { initAnimatedHeadline } from "@/animations/animatedHeadline";
 

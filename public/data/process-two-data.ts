@@ -1,10 +1,8 @@
 import processThumb from "@/public/images/process/thumb.webp";
-
 import processOne from "@/public/images/process/one.webp";
 import processTwo from "@/public/images/process/two.webp";
 import processThree from "@/public/images/process/sm-thumb.webp";
 import processFour from "@/public/images/process/three.webp";
-
 import { ProcessData } from "@/types/process.types";
 
 export const processData: ProcessData = {

@@ -10,15 +10,7 @@ export interface ProjectTab {
   id: number;
   key: ProjectGroup;
   label: string;
-
-  /**
-   * Active category when switching tabs.
-   */
   defaultCategory: ProjectCategory;
-
-  /**
-   * Category buttons displayed under the tab.
-   */
   categories: ReadonlyArray<ProjectCategoryItem>;
 }
 

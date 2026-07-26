@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 const AboutSectionFour = () => {
   return (
     <section className="about-four pt-140 pb-140 template-bg">
@@ -9,13 +8,7 @@ const AboutSectionFour = () => {
           <div className="col-12">
             <div className="about-four__wrapper">
               <div className="about-four__thumb">
-<video
-  src="/images/demo.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-/>
+                <video src="/images/demo.mp4" autoPlay muted loop playsInline />
               </div>
               <div className="about-four__content mt-80">
                 <h2 className="title-lg fw-6 title-animation text-center">

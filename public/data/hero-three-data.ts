@@ -1,5 +1,4 @@
 import type { HeroThreeData } from "@/types/hero-three";
-
 import bgOne from "@/public/images/bg-one.webp";
 import bgTwo from "@/public/images/bg-two.webp";
 import bgThree from "@/public/images/bg-three.webp";

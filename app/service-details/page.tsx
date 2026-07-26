@@ -1,11 +1,13 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import HeaderLight from "@/components/layout/header/HeaderLight";
-import Footer from "@/components/layout/footer/Footer";
 import ServiceDetailsBanner from "@/components/layout/banner/ServiceDetailsBanner";
 import Vision from "@/components/containers/Vision";
-import ServiceDetails from "@/components/containers/ServiceDetails";
+import Footer from "@/components/layout/footer/Footer";
 
+const ServiceDetails = dynamic(
+  () => import("@/components/containers/ServiceDetails"),
+);
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 
 export const generateMetadata = async (): Promise<Metadata> => ({

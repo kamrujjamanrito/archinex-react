@@ -1,5 +1,4 @@
 "use client";
-
 import AboutIntro from "@/components/widgets/about/AboutIntro";
 import AboutLargeContent from "@/components/widgets/about/AboutLargeContent";
 import AboutLargeImage from "@/components/widgets/about/AboutLargeImage";

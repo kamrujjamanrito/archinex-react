@@ -1,7 +1,6 @@
 import projectThree from "@/public/images/projects/three.webp";
 import projectFour from "@/public/images/projects/four.webp";
 import projectFive from "@/public/images/projects/five.webp";
-
 import type { StaticImageData } from "next/image";
 
 export interface ProjectFourItem {

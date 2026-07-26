@@ -1,5 +1,4 @@
 import type { StaticImageData } from "next/image";
-
 import one from "@/public/images/partners/one.webp";
 import two from "@/public/images/partners/two.webp";
 import three from "@/public/images/partners/three.webp";

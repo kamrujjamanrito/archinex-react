@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import { marqueeItems } from "@/public/data/marquee-data";
 
 const Marquee = () => {

@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import HoverImage from "./HoverImage";
 import { WorkItem } from "@/public/data/work-data";
 
@@ -8,7 +7,7 @@ interface WorkCardProps {
   priority?: boolean;
 }
 
-const WorkCard = ({ item, priority = false }: WorkCardProps) => {
+const WorkCard = ({ item }: WorkCardProps) => {
   const {
     title,
     href,

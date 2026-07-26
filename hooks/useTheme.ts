@@ -1,5 +1,4 @@
 "use client";
-
 import { useCallback, useSyncExternalStore } from "react";
 
 export type Theme = "light" | "dark";

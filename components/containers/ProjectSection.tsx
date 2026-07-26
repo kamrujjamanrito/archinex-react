@@ -1,10 +1,7 @@
 "use client";
-
 import { useMemo, useState } from "react";
-
 import ProjectBanner from "../layout/banner/ProjectBanner";
 import ProjectCategorySection from "../widgets/project/ProjectCategorySection";
-
 import {
   projectData,
   type ProjectCategory,

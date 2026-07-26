@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-
 import arrowImage from "@/public/images/arrow-two.webp";
 import { hoverEffectConfig } from "@/constants/hoverEffect";
 
@@ -33,8 +32,8 @@ const HoverImage = ({
         src={image}
         alt={imageAlt}
         placeholder="blur"
-priority={priority}
-  unoptimized
+        priority={priority}
+        unoptimized
       />
 
       <div className="arrow">

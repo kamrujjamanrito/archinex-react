@@ -1,5 +1,4 @@
 "use client";
-
 import { heroTwoData } from "@/public/data/hero-two-data";
 
 const HeroLanguage = () => {
@@ -7,15 +6,11 @@ const HeroLanguage = () => {
 
   return (
     <div className="hero-two__lang">
-      <button type="button">
-        {language.primary}
-      </button>
+      <button type="button">{language.primary}</button>
 
       <span className="divider-c">/</span>
 
-      <button type="button">
-        {language.secondary}
-      </button>
+      <button type="button">{language.secondary}</button>
     </div>
   );
 };

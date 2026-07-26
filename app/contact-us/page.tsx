@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import Header from "@/components/layout/header/Header";
-import Footer from "@/components/layout/footer/Footer";
 import ContactBanner from "@/components/layout/banner/ContactBanner";
 import ContactSection from "@/components/containers/ContactSection";
+import Footer from "@/components/layout/footer/Footer";
 
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 

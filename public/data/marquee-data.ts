@@ -1,5 +1,4 @@
 import type { StaticImageData } from "next/image";
-
 import flowerImage from "@/public/images/flower.webp";
 
 export interface MarqueeItem {

@@ -1,12 +1,8 @@
 "use client";
-
 import { useEffect } from "react";
 import Image from "next/image";
-
 import { heroTwoData } from "@/public/data/hero-two-data";
-
 import { initHeroTwo } from "@/animations/heroTwo";
-
 import HeroHeading from "@/components/widgets/HeroHeading";
 import HeroLanguage from "@/components/widgets/HeroLanguage";
 import HeroCTA from "@/components/widgets/HeroCTA";

@@ -1,15 +1,12 @@
 "use client";
-
 import { useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import { projectFourSlides } from "@/public/data/project-four-data";
-
 import one from "@/public/images/plus.webp";
 
 const autoplayDelay = 5000;
@@ -24,9 +21,6 @@ const ProjectFour = () => {
   ) => {
     const el = progressRef.current;
     if (!el) return;
-
-    // progress goes from 1 -> 0 as the autoplay timer counts down,
-    // so fill width should be the inverse of that.
     el.style.transition = "none";
     el.style.width = `${(1 - progress) * 100}%`;
   };

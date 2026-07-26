@@ -3,7 +3,6 @@ import projectTwo from "@/public/images/projects/cp-two.webp";
 import projectThree from "@/public/images/projects/cp-three.webp";
 import projectFour from "@/public/images/projects/cp-four.webp";
 import projectFive from "@/public/images/projects/cp-five.webp";
-
 import type { ProjectData } from "@/types/project";
 
 export const projectData: ProjectData = {

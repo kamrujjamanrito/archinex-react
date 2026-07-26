@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +7,6 @@ import {
   workProcessSteps,
   serviceFeatures,
 } from "@/public/data/service-details-data";
-
 import one from "@/public/images/services/larger-thumb.webp";
 import two from "@/public/images/services/sm-thumb.webp";
 import three from "@/public/images/services/poster.webp";
