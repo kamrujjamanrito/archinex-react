@@ -454,20 +454,11 @@
 .about-four__thumb {
   height: 600px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include xl-screen {
-    height: 970px;
-  }
-    @include xxl-screen {
-    height: 1000px;
-  }
 
-  video {
+  img {
     width: 100%;
-    min-height: 100%;
-    object-fit: cover;
+    min-height: 400px;
+    height: 600px;
   }
 }
 
