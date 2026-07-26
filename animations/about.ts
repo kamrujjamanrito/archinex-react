@@ -37,7 +37,7 @@ export function initAbout(): () => void {
       });
 
       gsap.set(thumb, {
-        scale: 0.04,
+        scale: 0.03,
         y: "-862px",
         x: "21.8%",
         overflow: "hidden",
