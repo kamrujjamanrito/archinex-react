@@ -15,6 +15,11 @@ export function initPreloader({ onComplete }: PreloaderOptions = {}) {
 
   if (!progressBar || !counter) {
     onComplete?.();
+
+    requestAnimationFrame(() => {
+      window.dispatchEvent(new Event("resize"));
+    });
+
     return;
   }
 
@@ -47,6 +52,10 @@ export function initPreloader({ onComplete }: PreloaderOptions = {}) {
 
         onComplete() {
           onComplete?.();
+
+          requestAnimationFrame(() => {
+            window.dispatchEvent(new Event("resize"));
+          });
         },
       });
     },

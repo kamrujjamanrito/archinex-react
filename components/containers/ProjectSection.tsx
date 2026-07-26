@@ -17,12 +17,6 @@ const ProjectSection = () => {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategory>("Residential");
 
-  /**
-   * Filter projects by current tab + category.
-   * Since projectData now contains every
-   * group/category combination, this will
-   * always return the correct 7 cards.
-   */
   const currentProjects = useMemo(() => {
     return projectData.filter(
       (project) =>

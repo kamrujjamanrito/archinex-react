@@ -14,7 +14,6 @@ import Vision from "@/components/containers/Vision";
 import Testimonial from "@/components/containers/Testimonial";
 import ProcessTwo from "@/components/containers/ProcessTwo";
 
-
 const VideoSection = dynamic(
   () => import("@/components/containers/VideoSection"),
 );
@@ -59,7 +58,7 @@ const page = () => {
       <Work />
       <ServiceSection />
       <OverviewTwo />
-      <Partner/>
+      <Partner />
       <ProcessTwo />
       <Testimonial />
       <Vision />

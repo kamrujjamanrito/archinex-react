@@ -33,11 +33,8 @@ const HoverImage = ({
         src={image}
         alt={imageAlt}
         placeholder="blur"
-        priority={priority}
-        sizes="(max-width:576px) 100vw,
-               (max-width:991px) 50vw,
-               (max-width:1199px) 50vw,
-               33vw"
+priority={priority}
+  unoptimized
       />
 
       <div className="arrow">

@@ -13,20 +13,27 @@ export const initService = () => {
     const services = gsap.utils.toArray<HTMLElement>(".service__list-single");
     const thumbs = gsap.utils.toArray<HTMLElement>(".service__thumb-single");
 
-    if (!services.length || !thumbs.length) {
+    const serviceInner =
+      wrapper.querySelector<HTMLElement>(".service__inner");
+    const serviceThumb =
+      wrapper.querySelector<HTMLElement>(".service__thumb");
+
+    if (
+      !services.length ||
+      !thumbs.length ||
+      !serviceInner ||
+      !serviceThumb
+    ) {
       return;
     }
 
     let current = 0;
-
     const duration = 10000;
-
     let timer: number | null = null;
 
     const restartLineAnimation = (line: HTMLElement) => {
       line.style.animation = "none";
       void line.offsetWidth;
-
       line.style.animation = "";
     };
 
@@ -115,25 +122,26 @@ export const initService = () => {
 
     if (window.innerWidth >= 1200) {
       trigger = ScrollTrigger.create({
-        trigger: ".service__inner",
+        trigger: serviceInner,
         start: "top+=200 center",
         end: "bottom+=300 bottom",
-
-        pin: ".service__thumb",
+        pin: serviceThumb,
         pinSpacing: false,
         scrub: true,
-
         invalidateOnRefresh: true,
-
         onEnter: stopTimer,
         onLeave: startTimer,
         onEnterBack: stopTimer,
         onLeaveBack: startTimer,
       });
 
-      requestAnimationFrame(() => {
-        ScrollTrigger.refresh();
-      });
+      const refresh = () => ScrollTrigger.refresh(true);
+
+      if (document.readyState === "complete") {
+        refresh();
+      } else {
+        window.addEventListener("load", refresh, { once: true });
+      }
     }
 
     return () => {

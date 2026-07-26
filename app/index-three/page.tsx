@@ -7,12 +7,14 @@ import AboutSectionThree from "@/components/containers/AboutSectionThree";
 import ServiceThree from "@/components/containers/ServiceThree";
 import Project from "@/components/containers/Project";
 import WorkTwo from "@/components/containers/WorkTwo";
-import ProjectSlider from "@/components/containers/ProjectSlider";
 import TeamThree from "@/components/containers/TeamThree";
 import TestimonialTwo from "@/components/containers/TestimonialTwo";
 import PartnerTwo from "@/components/containers/PartnerTwo";
 import Newsletter from "@/components/containers/Newsletter";
 
+const ProjectSlider = dynamic(
+  () => import("@/components/containers/ProjectSlider"),
+);
 const ClientWrapper = dynamic(() => import("@/components/ClientWrapper"));
 
 export const generateMetadata = async (): Promise<Metadata> => ({

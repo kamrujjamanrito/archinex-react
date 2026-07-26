@@ -20,9 +20,7 @@ export default function TeamThree() {
         <div className="row">
           <div className="col-12">
             <p className="text-lg txt-light fade-up mb-40">
-              <span className="brace">
-                {teamTwoData.intro.topText}
-              </span>
+              <span className="brace">{teamTwoData.intro.topText}</span>
             </p>
           </div>
         </div>
@@ -48,8 +46,7 @@ export default function TeamThree() {
 
       <div className="team-two__inner pt-140">
         <div className="container-lg">
-          <div className="row align-items-end gutter-40">
-            {/* Team List */}
+          <div className="row align-items-center gutter-40">
             <div className="col-12 col-xl-7">
               <div className="team-two__lists">
                 <ul>
@@ -58,9 +55,7 @@ export default function TeamThree() {
                       key={member.id}
                       className={member.active ? "active" : ""}
                     >
-                      <span className="serial">
-                        {member.serial}
-                      </span>
+                      <span className="serial">{member.serial}</span>
 
                       <span className="list-wrapper">
                         <i className="ph ph-arrow-up-right"></i>
@@ -69,17 +64,13 @@ export default function TeamThree() {
                           {member.name}
                         </span>
 
-                        <sup>
-                          ({member.designation})
-                        </sup>
+                        <sup>({member.designation})</sup>
                       </span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-
-            {/* Team Images */}
             <div className="col-12 col-sm-7 col-xl-3">
               <div className="team-two__thumbs">
                 {teamTwoData.members.map((member) => (
@@ -93,14 +84,9 @@ export default function TeamThree() {
                     data-speedin="1"
                     data-speedout="1"
                   >
-                    <Image
-                      src={member.image}
-                      alt={member.imageAlt}
-                    />
+                    <Image src={member.image} alt={member.imageAlt} />
                   </div>
                 ))}
-
-                {/* Decorative Image */}
                 <Image
                   src={teamTwoData.members[1].image}
                   alt={teamTwoData.members[1].imageAlt}
@@ -109,15 +95,12 @@ export default function TeamThree() {
               </div>
             </div>
 
-            {/* CTA */}
             <div className="col-12 col-sm-5 col-xl-2">
               <div className="team-two__cta">
                 <Link href={teamTwoData.cta.href}>
                   <i className="ph ph-arrow-up-right"></i>
 
-                  <span>
-                    {teamTwoData.cta.label}
-                  </span>
+                  <span>{teamTwoData.cta.label}</span>
                 </Link>
               </div>
             </div>

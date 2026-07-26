@@ -452,13 +452,15 @@
 
 // about four section styles
 .about-four__thumb {
-  height: 600px;
+  height: 1000px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  img {
+  video {
     width: 100%;
-    min-height: 400px;
-    height: 600px;
+    min-height: 600px;
   }
 }
 

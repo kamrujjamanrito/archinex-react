@@ -1,6 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
-import one from "@/public/images/about/six.webp";
+
 
 const AboutSectionFour = () => {
   return (
@@ -10,7 +9,13 @@ const AboutSectionFour = () => {
           <div className="col-12">
             <div className="about-four__wrapper">
               <div className="about-four__thumb">
-                <Image src={one} alt="Image" priority />
+<video
+  src="/images/demo.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+/>
               </div>
               <div className="about-four__content mt-80">
                 <h2 className="title-lg fw-6 title-animation text-center">

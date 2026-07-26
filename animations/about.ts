@@ -23,7 +23,7 @@ export function initAbout(): () => void {
     }
 
     const thumb = section.querySelector<HTMLElement>(".about-four__thumb");
-    const image = thumb?.querySelector<HTMLImageElement>("img");
+    const image = thumb?.querySelector<HTMLImageElement>("video");
 
     if (!thumb || !image) {
       return;
@@ -33,13 +33,13 @@ export function initAbout(): () => void {
 
     const ctx = gsap.context(() => {
       gsap.set(image, {
-        borderRadius: "400px",
+        borderRadius: "800px",
       });
 
       gsap.set(thumb, {
-        scale: 0.05,
-        y: "-645px",
-        x: "21.5%",
+        scale: 0.04,
+        y: "-862px",
+        x: "21.8%",
         overflow: "hidden",
       });
 
@@ -56,7 +56,7 @@ export function initAbout(): () => void {
         .to(
           image,
           {
-            borderRadius: "0px",
+            borderRadius: "20px",
             duration: 3,
             ease: "power1.inOut",
           },

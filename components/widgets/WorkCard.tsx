@@ -38,7 +38,7 @@ const WorkCard = ({ item, priority = false }: WorkCardProps) => {
       imageAlt={imageAlt}
       href={href}
       arrowAlt={arrowAlt}
-      priority={priority}
+      priority
     />
   );
 
